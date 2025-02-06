@@ -5,13 +5,13 @@ import { Stock } from "./schema";
 import { Portfolio } from "./schema";
 import { Transaction } from "./schema";
 
-await mongoose.connect('mongodb + srv://hugo:95DpDWfXB9Kwr9rh@cluster0.6aom8.mongodb.net/Examensprojekt?retryWrites=true&w=majority&appName=Cluster0');
+await mongoose.connect();
 
 const app = new Elysia();
 
 const fetchAndStoreStockData = async (symbol: string) => {
     try {
-        const response = await fetch(`https://api.twelvedata.com/time_series?symbol=${symbol}&interval=1day&apikey=f890bf4d27b64b26ad4e9c825dd0a5bf`);
+        const response = await fetch(`https://api.twelvedata.com/time_series?symbol=${symbol}&interval=1day&apikey=`);
         const data = await response.json();
 
         if (data && data.values) {
