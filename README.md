@@ -2,14 +2,30 @@
 
 To install dependencies:
 
+Windows
 ```bash
-bun install
+powershell -c "irm bun.sh/install.ps1 | iex"
+```
+
+Linux & MacOS
+```bash
+curl -fsSL https://bun.sh/install | bash
+```
+
+```bash
+bun install elysia
+```
+```bash
+bun install mongoose
+```
+```bash
+bun install chart.js
 ```
 
 To run:
 
 ```bash
-bun run index.ts
+bun run src/index.ts
 ```
 
 This project was created using `bun init` in bun v1.1.36. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
