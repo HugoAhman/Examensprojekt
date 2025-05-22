@@ -2,9 +2,6 @@
   "name": "examensprojekt",
   "version": "1.0.0",
   "license": "MIT",
-  "scripts": {
-    "dev": "src/index.ts"
-  },
   "devDependencies": {
     "@types/bun": "latest",
     "parcel": "^2.13.3"
