@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import * as mongoose from 'mongoose';
 
 const StockSchema = new mongoose.Schema({
     symbol: String,
@@ -13,6 +13,7 @@ const PortfolioSchema = new mongoose.Schema({
     symbol: String,
     quantity: Number,
     averagePrice: Number,
+    budget: Number,
 });
 
 const TransactionSchema = new mongoose.Schema({
@@ -20,7 +21,7 @@ const TransactionSchema = new mongoose.Schema({
     type: String, // "buy" or "sell"
     price: Number,
     quantity: Number,
-    date: Date,
+    date: String,
 });
 
 export const Stock = mongoose.model('Stock', StockSchema);
